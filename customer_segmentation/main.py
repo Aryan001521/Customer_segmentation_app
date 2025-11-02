@@ -6,8 +6,8 @@ import joblib
 import streamlit as st 
 
 # Load saved models
-kmeans = joblib.load('cutomer segmentation/kmeans_models.pkl')
-scaler = joblib.load('cutomer segmentation/scaler.pkl')
+kmeans = joblib.load('customer_segmentation/kmeans_models.pkl')
+scaler = joblib.load('customer_segmentation/scaler.pkl')
 
 # --- Custom CSS for background and styling ---
 st.markdown("""
@@ -141,3 +141,4 @@ if st.button("🔍 Predict Customer Segment"):
         """, unsafe_allow_html=True)
     else:
         st.warning("Cluster information not found.")
+
